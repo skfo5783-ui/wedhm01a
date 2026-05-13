@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: tomato;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.grid{ /* 그리드 레이아웃 자동 반응형 만들기 */
+    display: grid; /* 격자 그리드로 행과 열로 배치 */
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.card{
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-60px);
+}
+
+.card-thumb{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info{
+    padding: 12px;
+}
+
+.card-info h3{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.card-info span{
+    font-size: 12px;
+    color: yellowgreen;
+}
+
+.modal-bg{
+    display: none;
+    inset: 0; /* 화면 전체를 꽉 채운다 */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;        /* align-items, justify-content 세트 */
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-bg .open{
+    display: flex;
+}
+
+/* .modal-bg 의미는 뭐냐며언~ display:none -> 숨겨짐
+.modal-bg .open display: flex -> 숨겨진게 보여짐 */
+
+.modal{
+    background-color: #ffffff;
+    width: 90%;
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}

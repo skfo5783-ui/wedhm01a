@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>MODAL</h1>
+    <div class="grid">
+        <!-- 카드01 -->
+        <div class="card" onclick="openModal('img/onepice1.jpg','재미써재미써','무척이나재밌엉!')"> <!-- 모달이미지, 제목, 설명 순서~! -->
+            <img class="card-thumb" src="img/다운로드1.jpg" alt="01">
+            <div class="card-info">
+                <h3>원피스 재밌엉!</h3>
+                <span>원피스 재미있엉!</span>
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('img/onepice5.jpg','재미써재미써','무척이나재밌엉!')">
+            <img class="card-thumb" src="img/다운로드 (3).jpg" alt="02">
+            <div class="card-info">
+                <h3>원피스 재밌엉!</h3>
+                <span>원피스 재미있엉!</span>
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('img/onepice7.jpg','아무일도 없었다...','무척이나재밌엉!')">
+            <img class="card-thumb" src="img/다운로드 (4).jpg" alt="03">
+            <div class="card-info">
+                <h3>원피스 재밌엉!</h3>
+                <span>원피스 재미있엉!</span>
+            </div>
+        </div>
+
+        <div class="card" onclick="openModal('img/onepice2.jpg','재미써재미써','무척이나재밌엉!')">
+            <img class="card-thumb" src="img/원피스 (1).jpg" alt="04">
+            <div class="card-info">
+                <h3>원피스 재밌엉!</h3>
+                <span>원피스 재미있엉!</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 모달 -->
+    <div class="madal-bg">
+        <div class="madal">
+            <button class="modal-close">X</button>
+            <img class="modal-thumb" id="modal-img" src="" alt=""> <!-- 모달에 표시할 이미지 js로 src를 동적으로 바꿔서 쓴당 -->
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    function openModal(imgSrc, title, desc) {
+
+        document.getElementById('modal-img').src = imgSrc;
+
+        document.getElementById('modal-img').alt = title;
+
+        document.getElementById('modal-title').textContent = title;
+
+        document.getElementById('modal-desc').textContent = desc;
+
+        document.getElementById('modal-bg').classList.add('open');
+
+    }
+
+function closeModal(e) {
+
+if (!e || e.target === document.getElementById('modal-bg')) {
+document.getElementById('modal-bg').classList.remove('open');
+}}
+
+</script>
+
+</body>
+</html>
+
