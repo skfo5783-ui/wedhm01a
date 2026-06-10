@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans KR',sans-serif;
+}
+
+body{
+background:#f8faff;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 8%;
+
+background:white;
+border-bottom:1px solid #eee;
+
+z-index:999;
+}
+
+.logo a{
+text-decoration:none;
+color:#004aad;
+font-weight:700;
+font-size:1.1rem;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:40px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+}
+
+nav a:hover{
+color:#004aad;
+}
+
+/* HERO */
+
+.hero{
+padding-top:160px;
+text-align:center;
+}
+
+.badge{
+background:#e7f0ff;
+color:#004aad;
+
+padding:10px 20px;
+
+border-radius:50px;
+
+font-size:14px;
+font-weight:600;
+}
+
+.hero h1{
+font-size:4rem;
+margin:25px 0;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:1.8;
+color:#666;
+}
+
+/* CONTACT */
+
+.contact-wrap{
+
+max-width:1200px;
+
+margin:80px auto;
+
+padding:0 30px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+}
+
+.contact-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:24px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.contact-card h2{
+
+margin-bottom:30px;
+
+color:#004aad;
+}
+
+.info-item{
+
+margin-bottom:25px;
+}
+
+.info-item h4{
+
+margin-bottom:8px;
+
+color:#004aad;
+}
+
+.info-item p{
+
+color:#555;
+}
+
+/* 버튼 */
+
+.mail-btn,
+.blog-btn{
+
+display:block;
+
+text-align:center;
+
+padding:15px;
+
+margin-top:15px;
+
+background:#004aad;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.mail-btn:hover,
+.blog-btn:hover{
+
+background:#0066e0;
+
+transform:translateY(-3px);
+}
+
+/* 스킬 */
+
+.skill-wrap{
+
+display:flex;
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-bottom:40px;
+}
+
+.skill-wrap span{
+
+background:#e7f0ff;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+font-weight:600;
+
+color:#004aad;
+}
+
+.message h3{
+
+margin-bottom:15px;
+
+color:#004aad;
+}
+
+.message p{
+
+line-height:1.8;
+
+color:#666;
+}
+
+/* QUOTE */
+
+.quote{
+
+max-width:1200px;
+
+margin:100px auto;
+
+padding:60px;
+
+text-align:center;
+
+background:#004aad;
+
+border-radius:24px;
+
+color:white;
+}
+
+.quote h2{
+
+font-weight:400;
+
+line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+
+padding:50px 0;
+
+text-align:center;
+
+color:#888;
+}
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+.contact-wrap{
+
+grid-template-columns:1fr;
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav ul{
+gap:15px;
+}
+
+nav a{
+font-size:14px;
+}
+}
+
+.footer{
+    background:#004aad;
+    color:white;
+    text-align:center;
+    padding:30px;
+}

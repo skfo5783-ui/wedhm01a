@@ -1,85 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모달</title>
+    <title>포트폴리오</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>MODAL</h1>
-    <div class="grid">
-        <!-- 카드01 -->
-        <div class="card" onclick="openModal('img/onepice1.jpg','재미써재미써','무척이나재밌엉!')"> <!-- 모달이미지, 제목, 설명 순서~! -->
-            <img class="card-thumb" src="img/다운로드1.jpg" alt="01">
-            <div class="card-info">
-                <h3>원피스 재밌엉!</h3>
-                <span>원피스 재미있엉!</span>
-            </div>
-        </div>
 
-        <div class="card" onclick="openModal('img/onepice5.jpg','재미써재미써','무척이나재밌엉!')">
-            <img class="card-thumb" src="img/다운로드 (3).jpg" alt="02">
-            <div class="card-info">
-                <h3>원피스 재밌엉!</h3>
-                <span>원피스 재미있엉!</span>
-            </div>
-        </div>
+<header>
 
-        <div class="card" onclick="openModal('img/onepice7.jpg','아무일도 없었다...','무척이나재밌엉!')">
-            <img class="card-thumb" src="img/다운로드 (4).jpg" alt="03">
-            <div class="card-info">
-                <h3>원피스 재밌엉!</h3>
-                <span>원피스 재미있엉!</span>
-            </div>
-        </div>
+    <div class="logo">
+        <a href="index.html">JUNG HYE MIN</a>
+    </div>
 
-        <div class="card" onclick="openModal('img/onepice2.jpg','재미써재미써','무척이나재밌엉!')">
-            <img class="card-thumb" src="img/원피스 (1).jpg" alt="04">
-            <div class="card-info">
-                <h3>원피스 재밌엉!</h3>
-                <span>원피스 재미있엉!</span>
-            </div>
+    <nav>
+        <ul>
+
+            <li>
+                <a href="aboutme/index.html">ABOUT</a>
+            </li>
+
+            <li>
+                <a href="profile/index.html">PROFILE</a>
+            </li>
+
+            <li>
+                <a href="projects/index.html">PROJECTS</a>
+            </li>
+
+            <li>
+                <a href="contact/index.html">CONTACT</a>
+            </li>
+
+        </ul>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="sub-title">
+            UX/UI DESIGNER & DIGITAL MARKETER
+        </span>
+
+        <h1>
+            안녕하세요.<br>
+            정혜민입니다.
+        </h1>
+
+        <p>
+            사용자 경험을 중심으로 문제를 해결하고,<br>
+            감성과 데이터를 연결하는 디자인을 만듭니다.
+        </p>
+
+        <div class="hero-btns">
+            <a href="aboutme/index.html" class="btn-primary">
+                ABOUT ME
+            </a>
+
+            <a href="projects/index.html" class="btn-secondary">
+                VIEW PROJECTS
+            </a>
         </div>
 
     </div>
 
-    <!-- 모달 -->
-    <div class="madal-bg">
-        <div class="madal">
-            <button class="modal-close">X</button>
-            <img class="modal-thumb" id="modal-img" src="" alt=""> <!-- 모달에 표시할 이미지 js로 src를 동적으로 바꿔서 쓴당 -->
-            <div class="modal-body">
-                <h2 id="modal-title"></h2>
-                <p id="modal-desc"></p>
-            </div>
-        </div>
-    </div>
+</section>
 
-    <script>
+<!-- INTRO -->
 
-    function openModal(imgSrc, title, desc) {
+<section class="intro">
 
-        document.getElementById('modal-img').src = imgSrc;
+    <h2>PORTFOLIO</h2>
 
-        document.getElementById('modal-img').alt = title;
+    <p>
+        UX/UI 디자인과 디지털 마케팅을 기반으로<br>
+        사용자에게 더 나은 경험을 제공하기 위한 프로젝트를 진행했습니다.
+    </p>
 
-        document.getElementById('modal-title').textContent = title;
+</section>
 
-        document.getElementById('modal-desc').textContent = desc;
+<!-- QUICK MENU -->
 
-        document.getElementById('modal-bg').classList.add('open');
+<section class="quick-menu">
 
-    }
+    <a href="aboutme/index.html" class="card">
+        <h3>ABOUT</h3>
+        <p>나를 소개합니다</p>
+    </a>
 
-function closeModal(e) {
+    <a href="profile/index.html" class="card">
+        <h3>PROFILE</h3>
+        <p>역량과 가치관</p>
+    </a>
 
-if (!e || e.target === document.getElementById('modal-bg')) {
-document.getElementById('modal-bg').classList.remove('open');
-}}
+    <a href="projects/index.html" class="card">
+        <h3>PROJECTS</h3>
+        <p>프로젝트 모음</p>
+    </a>
 
-</script>
+    <a href="contact/index.html" class="card">
+        <h3>CONTACT</h3>
+        <p>연락하기</p>
+    </a>
 
-</body>
-</html>
+</section>
 
+<footer class="footer">
+    <p>© 2026 JUNG HYE MIN Portfolio</p>
+</footer>

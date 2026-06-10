@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PROJECTS</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="../index.html">JUNG HYE MIN</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="../aboutme/index.html">ABOUT</a></li>
+            <li><a href="../profile/index.html">PROFILE</a></li>
+            <li><a href="../projects/index.html">PROJECTS</a></li>
+            <li><a href="../contact/index.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <span class="badge">PORTFOLIO</span>
+
+    <h1>Projects</h1>
+
+    <p>
+        UX/UI 디자인과 디지털 마케팅을 기반으로<br>
+        다양한 프로젝트를 수행했습니다.
+    </p>
+
+</section>
+
+<!-- 프로젝트 카드 -->
+
+<section class="project-grid">
+
+<div class="project-card active"
+data-title="인천섬픽"
+data-image="img/pro1.png"
+data-role="UX/UI Design"
+data-tool="Figma"
+data-period="2026"
+data-desc="인천 섬 관광 정보를 쉽고 직관적으로 제공하는 UX/UI 기반 모바일 앱 프로젝트입니다.">
+
+<h2>인천섬픽</h2>
+<p>인천 섬 관광 UX/UI 앱</p>
+
+</div>
+
+<div class="project-card"
+data-title="컬러로드"
+data-image="img/pro2.png"
+data-role="UX/UI Design"
+data-tool="Figma"
+data-period="2026"
+data-desc="색을 기준으로 여행지를 추천하는 감성 여행 서비스입니다.">
+
+<h2>컬러로드</h2>
+<p>컬러 기반 여행 서비스</p>
+
+</div>
+
+<div class="project-card"
+data-title="쉼담"
+data-image="img/pro3.png"
+data-role="UX/UI Design"
+data-tool="Figma · Canva"
+data-period="2025"
+data-desc="감정 케어와 마음챙김을 위한 웹사이트 프로젝트입니다.">
+
+<h2>쉼담</h2>
+<p>감정 케어 웹사이트</p>
+
+</div>
+
+<div class="project-card"
+data-title="인천냠냠"
+data-image="img/pro4.png"
+data-role="UX/UI Design"
+data-tool="Figma"
+data-period="2025"
+data-desc="사용자 취향에 맞는 인천 맛집을 추천하는 모바일 앱입니다.">
+
+<h2>인천냠냠</h2>
+<p>맛집 큐레이션 앱</p>
+
+</div>
+
+<div class="project-card"
+data-title="쿠니"
+data-image="img/pro5.png"
+data-role="Marketing"
+data-tool="Canva · Photoshop"
+data-period="2025"
+data-desc="샴푸바 신제품 개발 및 마케팅 전략 프로젝트입니다.">
+
+<h2>쿠니</h2>
+<p>브랜드 마케팅</p>
+
+</div>
+
+<div class="project-card"
+data-title="상세페이지 디자인"
+data-image="img/pro6.png"
+data-role="Visual Design"
+data-tool="Photoshop"
+data-period="2025~2026"
+data-desc="건강기능식품 및 화장품 상세페이지 제작 프로젝트입니다.">
+
+<h2>상세페이지</h2>
+<p>Visual Design</p>
+
+</div>
+
+</section>
+
+<!-- 상세 영역 -->
+
+<section class="detail-section">
+
+<div class="detail-image">
+
+<img
+id="projectImage"
+src="img/pro1.png"
+alt="프로젝트 이미지">
+
+</div>
+
+<div class="detail-info">
+
+<span id="projectPeriod">2026</span>
+
+<h2 id="projectTitle">
+인천섬픽
+</h2>
+
+<div class="meta">
+
+<div>
+<h4>Role</h4>
+<p id="projectRole">UX/UI Design</p>
+</div>
+
+<div>
+<h4>Tool</h4>
+<p id="projectTool">Figma</p>
+</div>
+
+</div>
+
+<p id="projectDesc">
+인천 섬 관광 정보를 쉽고 직관적으로 제공하는 UX/UI 기반 모바일 앱 프로젝트입니다.
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+const cards = document.querySelectorAll('.project-card');
+
+cards.forEach(card => {
+
+card.addEventListener('click',()=>{
+
+cards.forEach(c=>{
+c.classList.remove('active');
+});
+
+card.classList.add('active');
+
+document.getElementById('projectImage').src =
+card.dataset.image;
+
+document.getElementById('projectTitle').textContent =
+card.dataset.title;
+
+document.getElementById('projectRole').textContent =
+card.dataset.role;
+
+document.getElementById('projectTool').textContent =
+card.dataset.tool;
+
+document.getElementById('projectPeriod').textContent =
+card.dataset.period;
+
+document.getElementById('projectDesc').textContent =
+card.dataset.desc;
+
+});
+
+});
+
+</script>
+
+<footer class="footer">
+    <p>© 2026 JUNG HYE MIN Portfolio</p>
+</footer>
+
+</body>
+</html>
